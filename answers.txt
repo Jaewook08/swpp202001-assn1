@@ -1,5 +1,5 @@
 Word 'the' appeared 2 times.
-Word '' appeared 1 times.
+Input is empty
 Word 'I' appeared 15 times.
 Word 'I' appeared 9 times.
 Word 'all' appeared 9 times.

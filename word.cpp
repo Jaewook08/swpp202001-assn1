@@ -8,9 +8,7 @@ int main(int argv, char **argc) {
   ifstream fin(argc[1]);
   string nextword;
 
-  while (!fin.eof()) {
-    fin >> nextword;
-
+  while (fin >> nextword) {
     bool found = false;
     for (auto &[word, occurrence] : words) {
       if (word == nextword) {
@@ -21,6 +19,11 @@ int main(int argv, char **argc) {
     }
     if (!found)
       words.emplace_back(nextword, 1);
+  }
+
+  if (words.empty()) {
+    cout << "Input is empty" << endl;
+    return 0;
   }
 
   string word_with_max_occur = words[0].first;
